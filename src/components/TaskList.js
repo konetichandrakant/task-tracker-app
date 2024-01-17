@@ -1,5 +1,3 @@
-// src/components/TaskList.js
-
 import React from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import TaskItem from './TaskItem';

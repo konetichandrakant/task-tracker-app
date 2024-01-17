@@ -9,12 +9,12 @@ const App = () => {
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     setTasks(storedTasks);
-  }, []); // Run only once on mount
+  }, []);
 
   useEffect(() => {
     if (tasks !== null)
       localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]); // Update local storage whenever tasks change
+  }, [tasks]);
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
